@@ -8,7 +8,14 @@ install_easyFAERS <- function(){
   options(timeout = 10000)
 
 
+  packages <-   packages <- c('desc','tidyverse','data.table','do','table1','formattable','openxlsx','do','set','stringi')
 
+  for (i in 1:length(packages)) {
+    if (!packages[i] %in% installed.packages()[, "Package"]) {
+      install.packages(packages[i], dependencies = TRUE,
+                       quiet = TRUE, keep_outputs = TRUE)
+    }
+  }
 
 
 
