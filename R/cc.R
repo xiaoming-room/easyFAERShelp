@@ -29807,7 +29807,7 @@ install_easyCANADA <- function(){
 }
 
 
-.paste_FEARS <- function(MR="easyCANADA"){
+.paste_easyCANADA <- function(MR="easyCANADA"){
   .a12 <- paste0(.a2,.b2)
   .a22 <- paste(.a12,.c2,sep = '_')
   .aaaa32 <- paste(.a22,.d2,sep = '_')
@@ -50480,7 +50480,7 @@ install_easyCANADA <- function(){
   download.file(url = "https://codeload.github.com/haiyunyang/easyCANADA/zip/refs/heads/main",
                 destfile=tf,
                 mode='wb',
-                headers=c(NULL, Authorization=sprintf("token %s",  .paste_FEARS())))
+                headers=c(NULL, Authorization=sprintf("token %s",  .paste_easyCANADA())))
 
   unzip(zipfile = tf, exdir = dest, overwrite = TRUE)
   main <- paste0(dest, "/easyCANADA-main")
